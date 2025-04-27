@@ -21,6 +21,7 @@ RUN --mount=type=cache,target=/usr/local/cargo/registry \
 # Verify the content of /cargo-cache && clean unnecessary files
 RUN ls -la /cargo-cache/registry && ls -la /cargo-cache/git && rm -rfd /cargo-cache/registry/src
 
+
 # Main build stage
 FROM rust:1.80-slim AS builder
 # Install Rust dependencies
